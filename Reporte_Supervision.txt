@@ -1,0 +1,4 @@
+RESUMEN DE SUPERVISIÓN - SIMULADOR DE REDES
+==========================================
+Tickets totales: 1
+Revisiones de gabinete: 2
