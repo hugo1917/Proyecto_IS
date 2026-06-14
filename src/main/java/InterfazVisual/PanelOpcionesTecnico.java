@@ -15,7 +15,7 @@ public class PanelOpcionesTecnico extends javax.swing.JFrame {
      */
     public PanelOpcionesTecnico() {
         initComponents();
-        this.setLocationRelativeTo(null); // Esto centra la ventana siempre
+        this.setLocationRelativeTo(null); 
     }
 
     PanelOpcionesTecnico(String nombreUsuario) {
