@@ -3,6 +3,7 @@ package CapaDatos;
 public class Incidencia {
 
    
+    
     private String idIncidencia;
     private String descripcion;
     private String prioridad;
@@ -14,7 +15,7 @@ public class Incidencia {
     }
 
     public boolean guardarIncidencia() {
-        System.out.println("Guardando incidencia " + idIncidencia + " en Base de Datos...");
+        System.out.println("Guardando incidencia " + idIncidencia + " en la Base de Datos...");
         return true;
     }
 
