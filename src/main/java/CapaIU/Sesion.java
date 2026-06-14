@@ -1,7 +1,19 @@
 package CapaIU;
 
 public class Sesion {
-    public static String id;
-    public static String nombre;
-    public static String rol;
+
+    private static Sesion instancia;
+
+    private String id;
+    private String nombre;
+    private String rol;
+
+    private Sesion() {}
+
+    public static Sesion getInstancia() {
+        if (instancia == null) {
+            instancia = new Sesion();
+        }
+        return instancia;
+    }
 }
