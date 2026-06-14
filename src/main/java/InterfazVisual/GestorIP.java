@@ -164,7 +164,7 @@ public class GestorIP extends javax.swing.JFrame {
     private void RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarActionPerformed
     try {
         if (HostName.getText().isEmpty() || IP.getText().isEmpty() || IdProyecto.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios.");
+            JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios");
             return;
         }
 
@@ -177,11 +177,11 @@ public class GestorIP extends javax.swing.JFrame {
 
         tableRegistro.setModel(db.obtenerDispositivos());
         
-        JOptionPane.showMessageDialog(this, "Dispositivo registrado y direccionamiento actualizado.");
+        JOptionPane.showMessageDialog(this, "Dispositivo registrado, direccionamiento actualizado.");
         LimpiarBTNActionPerformed(null); // Limpiar cuadros de texto
 
     } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "El ID de proyecto debe ser un número entero.");
+        JOptionPane.showMessageDialog(this, "El ID de proyecto debe ser un número entero");
     }
     }//GEN-LAST:event_RegistrarActionPerformed
 
