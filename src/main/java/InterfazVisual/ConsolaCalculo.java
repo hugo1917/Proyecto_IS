@@ -185,7 +185,7 @@ public class ConsolaCalculo extends javax.swing.JFrame {
                 }
             }
         } catch (NumberFormatException e) {
-            System.out.println("Fila " + i + " ignorada por formato incorrecto.");
+            System.out.println("Fila " + i + " ignorada por formato incorrecto");
         }
     }
     
@@ -228,7 +228,7 @@ public class ConsolaCalculo extends javax.swing.JFrame {
             ipActual += salto;
         }
     } catch (Exception e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Error: Verifique que los hosts sean números.");
+        javax.swing.JOptionPane.showMessageDialog(this, "Error: Verifica que los hosts sean números.");
     }
     }//GEN-LAST:event_btnCalcularActionPerformed
 
