@@ -201,9 +201,9 @@ CapaDatos.ConexionDB db = new CapaDatos.ConexionDB();
         pst.setString(5, new String(Contraseña.getPassword()));
         
         pst.executeUpdate();
-        javax.swing.JOptionPane.showMessageDialog(this, "Registro exitoso en la base de datos.");
+        javax.swing.JOptionPane.showMessageDialog(this, "Registro exitoso en la base de datos");
     } catch (Exception e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Error al registrar: " + e.getMessage());
+        javax.swing.JOptionPane.showMessageDialog(this, "Error al registrar " + e.getMessage());
     }
     }//GEN-LAST:event_RegistrarBTNActionPerformed
 
@@ -233,14 +233,14 @@ CapaDatos.ConexionDB db = new CapaDatos.ConexionDB();
                 this.dispose(); // Cerrar el login
                 
             } else {
-                JOptionPane.showMessageDialog(this, "El rol seleccionado no coincide con su perfil.");
+                JOptionPane.showMessageDialog(this, "El rol seleccionado no coincide con su perfil");
             }
         } else {
-            JOptionPane.showMessageDialog(this, "ID o Contraseña incorrectos.");
+            JOptionPane.showMessageDialog(this, "ID o Contraseña incorrectos");
         }
 
     } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "El ID debe ser un número.");
+        JOptionPane.showMessageDialog(this, "El ID debe ser un número");
     }
     }//GEN-LAST:event_EntrarBTNActionPerformed
 
@@ -271,7 +271,7 @@ CapaDatos.ConexionDB db = new CapaDatos.ConexionDB();
                 new RegistroUsuario().setVisible(true);
             }
         });
-    } 
+    }  
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField Contraseña;
