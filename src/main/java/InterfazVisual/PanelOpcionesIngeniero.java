@@ -8,7 +8,7 @@ public class PanelOpcionesIngeniero extends javax.swing.JFrame {
      */
     public PanelOpcionesIngeniero() {
         initComponents();
-        this.setLocationRelativeTo(null); // Esto centra la ventana siempre
+        this.setLocationRelativeTo(null);
     }
 
     PanelOpcionesIngeniero(String nombreUsuario) {
