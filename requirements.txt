@@ -1,0 +1,107 @@
+=========================================================
+ REQUERIMIENTOS Y DEPENDENCIAS - NETCALC PRO (ProyectoIS)
+=========================================================
+
+Este archivo documenta todo lo necesario para compilar, ejecutar
+y poner en marcha el sistema "Simulador de Redes / NetCalc Pro".
+
+---------------------------------------------------------
+1. REQUERIMIENTOS DE ENTORNO (SOFTWARE BASE)
+---------------------------------------------------------
+
+- Java Development Kit (JDK)        -> version 21
+- Apache Maven                       -> version 3.9.x o superior
+- MariaDB Server                     -> version 10.x / 11.x
+                                         (compatible con mariadb-java-client 3.5.8)
+- NetBeans IDE                       -> version 21 o superior
+                                         (recomendado, ya que la interfaz grafica
+                                         fue generada con el GUI Builder de NetBeans
+                                         y usa archivos .form)
+- Sistema operativo                  -> Windows / Linux / macOS
+                                         (cualquiera con soporte para JDK 21
+                                         y entorno grafico para Swing)
+
+---------------------------------------------------------
+2. DEPENDENCIAS MAVEN (definidas en pom.xml)
+---------------------------------------------------------
+
+groupId: org.mariadb.jdbc
+artifactId: mariadb-java-client
+version: 3.5.8
+descripcion: Driver JDBC para conexion con la base de datos MariaDB
+
+groupId: unknown.binary
+artifactId: AbsoluteLayout
+version: SNAPSHOT
+descripcion: Libreria de NetBeans usada para el posicionamiento absoluto
+             de componentes Swing en las pantallas (.form)
+nota: incluida localmente en /lib (repositorio temporal de NetBeans),
+      se recomienda sustituirla por una dependencia oficial de Maven Central:
+      groupId: org.netbeans.api
+      artifactId: org-netbeans-modules-form
+      (o usar la version distribuida con el plugin de NetBeans Platform)
+
+---------------------------------------------------------
+3. LIBRERIAS ESTANDAR DE JAVA (incluidas en el JDK)
+---------------------------------------------------------
+
+- java.sql.*       -> JDBC (Connection, PreparedStatement, ResultSet, etc.)
+- javax.swing.*    -> Interfaz grafica de escritorio (JOptionPane, JTable,
+                      DefaultTableModel, DefaultTableCellRenderer, etc.)
+- java.util.*      -> Estructuras de datos (Arrays, List)
+
+---------------------------------------------------------
+4. BASE DE DATOS
+---------------------------------------------------------
+
+Motor:        MariaDB
+Base de datos: simulador_redes
+Host:         localhost
+Puerto:       3016   (NO es el puerto estandar 3306, debe configurarse
+                       el servidor para escuchar en este puerto o
+                       modificar CapaDatos/ConexionDB.java)
+Usuario:      root
+Password:     3016
+
+Tablas requeridas (usadas directamente por el codigo):
+  - usuarios          (id, password, rol)
+  - proyectos         (id, nombre, estado, id_ingeniero, fecha_creacion)
+  - dispositivos      (id, hostname, ip_address, tipo, id_proyecto)
+  - tickets           (id_ticket, id_proyecto, asunto, prioridad,
+                        estado, fecha_reporte)
+  - checklist_gabinete (id_proyecto, limpieza, ventilacion, cerradura,
+                        fecha_revision)
+  - gabinete_check    (id_proyecto, limpieza, ventilacion, cerradura,
+                        fecha_revision)
+
+Nota: el proyecto no incluye un script .sql de creacion de esquema;
+debe crearse manualmente antes de ejecutar la aplicacion.
+
+---------------------------------------------------------
+5. INTEGRACIONES EXTERNAS (SIMULADAS - sin dependencias reales aun)
+---------------------------------------------------------
+
+Paquete: Integracion / ApiExterna.java
+  - Autenticacion contra Active Directory (LDAP)  -> simulada
+  - Servicio de geolocalizacion                   -> simulado
+  - Ejecucion de comandos del sistema operativo   -> simulado
+
+Estas integraciones actualmente devuelven valores fijos (mock).
+Si se implementan de forma real, se deberian agregar dependencias
+adicionales, por ejemplo:
+  - Cliente LDAP (ej. UnboundID LDAP SDK o JNDI nativo de Java)
+  - Cliente HTTP para API de geolocalizacion (ej. java.net.http o OkHttp)
+
+---------------------------------------------------------
+6. EJECUCION DEL PROYECTO
+---------------------------------------------------------
+
+1. Instalar JDK 21 y Apache Maven
+2. Instalar y configurar MariaDB en el puerto 3016
+3. Crear la base de datos "simulador_redes" y sus tablas
+4. Compilar:   mvn clean package
+5. Ejecutar:   mx.edu.uv.proyectois.ProyectoIS (clase principal)
+
+---------------------------------------------------------
+FIN DEL ARCHIVO
+---------------------------------------------------------
