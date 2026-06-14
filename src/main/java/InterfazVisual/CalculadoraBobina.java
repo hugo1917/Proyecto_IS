@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package InterfazVisual;
 
 /**
@@ -129,7 +125,7 @@ public class CalculadoraBobina extends javax.swing.JFrame {
 
         jLabel5.setText("Marca Inicial:");
 
-        lbl.setText("Marca Fin:");
+        lbl.setText("Marca Final:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -207,7 +203,7 @@ public class CalculadoraBobina extends javax.swing.JFrame {
             double pesoNetoCableActual = pActual - 1.0; 
             double metrosRestantes = pesoNetoCableActual / pesoMetro;
             
-            mensajeFinal = String.format("Restan aprox: %.2f m", metrosRestantes);
+            mensajeFinal = String.format("Restan aproximadamente: %.2f m", metrosRestantes);
         } 
         
         else if (!MarcaInicio.getText().isEmpty() && !MarcaFin.getText().isEmpty()) {
@@ -224,7 +220,7 @@ public class CalculadoraBobina extends javax.swing.JFrame {
         Resultados.setText(mensajeFinal);
 
     } catch (NumberFormatException e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Error: Ingrese solo números (use punto para decimales)");
+        javax.swing.JOptionPane.showMessageDialog(this, "Error: Ingrese solo números");
     }
     }//GEN-LAST:event_CalcularBTNActionPerformed
 
