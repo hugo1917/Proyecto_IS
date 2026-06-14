@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package InterfazVisual;
 import javax.swing.JOptionPane;   
 import javax.swing.table.DefaultTableModel; 
@@ -278,7 +274,7 @@ try {
     cn.close();
 
 } catch (Exception e) {
-    javax.swing.JOptionPane.showMessageDialog(this, "Error al actualizar revisiones: " + e.getMessage());
+    javax.swing.JOptionPane.showMessageDialog(this, "Error, actualizar revisiones: " + e.getMessage());
 }
     }//GEN-LAST:event_ActualizaBTNActionPerformed
 
@@ -296,7 +292,7 @@ if (filaSeleccionada == -1) {
 
 // 3. Confirmación de seguridad
 int confirmar = javax.swing.JOptionPane.showConfirmDialog(this, 
-    "¿Está seguro de marcar este ticket como resuelto? Se eliminará de la base de datos.", 
+    "¿Está seguro de marcar este ticket como resuelto? Se eliminará de la base de datos", 
     "Confirmar Resolución", javax.swing.JOptionPane.YES_NO_OPTION);
 
 if (confirmar == javax.swing.JOptionPane.YES_OPTION) {
