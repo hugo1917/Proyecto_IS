@@ -3,10 +3,7 @@ package InterfazVisual;
 import javax.swing.JOptionPane;   
 import javax.swing.table.DefaultTableModel; 
 import CapaDatos.ConexionDB;
-/**
- *
- * @author FRAID
- */
+
 public class RegistroProyecto extends javax.swing.JFrame {
 
     CapaDatos.ConexionDB db = new CapaDatos.ConexionDB();
@@ -128,7 +125,7 @@ public class RegistroProyecto extends javax.swing.JFrame {
     try {
         // 1. Validar que no estén vacíos
         if (NombreProyecto.getText().isEmpty() || IDingeniero.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor llene todos los campos obligatorios.");
+            JOptionPane.showMessageDialog(this, "Por favor llene todos los campos obligatorios ");
             return;
         }
 
@@ -143,7 +140,7 @@ public class RegistroProyecto extends javax.swing.JFrame {
         LimpiarBTNActionPerformed(null);
 
     } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "El ID del ingeniero debe ser un número válido.");
+        JOptionPane.showMessageDialog(this, "El ID del ingeniero debe ser un número válido");
     }
     }//GEN-LAST:event_GuardarBTNActionPerformed
 
