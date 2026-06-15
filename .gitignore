@@ -1,0 +1,63 @@
+
+# =========================
+# JAVA / MAVEN
+# =========================
+
+/target/
+/build/
+/dist/
+
+*.class
+*.jar
+*.war
+*.ear
+
+# =========================
+# NETBEANS
+# =========================
+
+/nbproject/private/
+/nbproject/Makefile-*.mk
+nbproject/private/
+/nbactions.xml
+nb-configuration.xml
+
+# =========================
+# WINDOWS
+# =========================
+
+Thumbs.db
+Desktop.ini
+
+# =========================
+# ARCHIVOS TEMPORALES
+# =========================
+
+*.log
+*.tmp
+*.temp
+
+# =========================
+# BASE DE DATOS / BACKUPS
+# =========================
+
+*.sql
+*.db
+*.bak
+
+# =========================
+# CONFIGURACIONES SENSIBLES
+# =========================
+
+*.env
+db.properties
+config.properties
+application.properties
+
+# =========================
+# IDE (INTELLIJ OPCIONAL SI LO USAS)
+# =========================
+
+.idea/
+*.iml
+out/
