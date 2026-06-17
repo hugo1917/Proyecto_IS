@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package InterfazVisual;
 
 import javax.swing.JOptionPane;   
@@ -188,12 +185,12 @@ CapaDatos.ConexionDB db = new CapaDatos.ConexionDB();
         boolean funcionaCerrad = CerraduraCheck.isSelected();
         
         if (db.guardarGabineteCheck(idProy, esLimpio, tieneVent, funcionaCerrad)) {
-            JOptionPane.showMessageDialog(this, "¡Checklist guardado con éxito!");
+            JOptionPane.showMessageDialog(this, "¡Checklist guardado!");
             limpiarCampos(); 
         }
 
     } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "El ID del proyecto debe ser un número entero.");
+        JOptionPane.showMessageDialog(this, "El ID del proyecto debe ser un número entero");
     }
     }//GEN-LAST:event_GuardarBTNActionPerformed
 
