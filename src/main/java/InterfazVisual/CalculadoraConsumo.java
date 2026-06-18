@@ -121,7 +121,7 @@ public class CalculadoraConsumo extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 260, 190));
 
         jLabel1.setFont(new java.awt.Font("Bernard MT Condensed", 1, 36)); // NOI18N
-        jLabel1.setText("Calculadora Consumo");
+        jLabel1.setText("Calculadora de Consumo");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, -1, -1));
 
         Carga.setModel(new javax.swing.table.DefaultTableModel(
@@ -212,7 +212,7 @@ public class CalculadoraConsumo extends javax.swing.JFrame {
         });
         getContentPane().add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 530, -1, -1));
 
-        LimpiarBTN.setText("Limpiar");
+        LimpiarBTN.setText("Limpiar Todo");
         LimpiarBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LimpiarBTNActionPerformed(evt);
@@ -237,7 +237,7 @@ public class CalculadoraConsumo extends javax.swing.JFrame {
         Potencia.setText("");
         
     } catch (NumberFormatException e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Por favor, ingresa números válidos.");
+        javax.swing.JOptionPane.showMessageDialog(this, "Error: Por favor, ingresa números válidos.");
     }
     }//GEN-LAST:event_AgregarBTNActionPerformed
 
