@@ -18,14 +18,14 @@ public class Usuario {
 
      
     public boolean login() {
-        System.out.println("Iniciando proceso de autenticación para: " + this.nombre);
+        System.out.println("Iniciando proceso de autenticacion para: " + this.nombre);
         
         if (this.id != null && !this.id.isEmpty()) {
-            System.out.println("Acceso concedido con el rol: " + this.rol);
+            System.out.println("Acceso concedido con el rol de: " + this.rol);
             return true;
         }
         
-        System.out.println("Error de autenticación: ID de usuario no válido.");
+        System.out.println("Error de autenticacion: ID de usuario no válido.");
         return false;
     }
 
