@@ -53,6 +53,6 @@ public class Dispositivo {
 
     @Override
     public String toString() {
-        return "Dispositivo [Host=" + hostname + ", IP=" + ip + ", MAC=" + mac + ", Estado=" + estado + "]";
+        return "Dispositivos [Hosts=" + hostname + ", IP=" + ip + ", MAC=" + mac + ", Estado=" + estado + "]";
     }
 }

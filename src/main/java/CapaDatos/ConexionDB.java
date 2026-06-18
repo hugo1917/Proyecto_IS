@@ -75,7 +75,7 @@ public void registrarProyecto(String nombre, String estado, int idIngeniero) {
     } catch (SQLException e) {
         
         if (e.getErrorCode() == 1452) {
-            javax.swing.JOptionPane.showMessageDialog(null, "Error: El ID de ingeniero no existe en la base de datos.");
+            javax.swing.JOptionPane.showMessageDialog(null, "Error: El ID del ingeniero no existe en la base de datos.");
         } else {
             javax.swing.JOptionPane.showMessageDialog(null, "Error al registrar: " + e.getMessage());
         }
