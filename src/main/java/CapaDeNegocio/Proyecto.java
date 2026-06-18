@@ -15,6 +15,7 @@ public class Proyecto {
 
     private List<Dispositivo> dispositivos;
     private List<Incidencia> incidencias;
+    if (dispositivos == null) dispositivos = new ArrayList<>();
 
 
     public Proyecto(int idProyecto, String nombre) {
@@ -69,4 +70,11 @@ public class Proyecto {
     public List<Incidencia> getIncidencias() {
         return incidencias;
     }
+
+    public String generarReporteTexto() {
+    return "Proyecto: " + nombre +
+           "\nDispositivos: " + dispositivos.size() +
+           "\nIncidencias: " + incidencias.size();
+}
+    
 }
